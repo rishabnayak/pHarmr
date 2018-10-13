@@ -1,4 +1,5 @@
 <template>
+<div>
   <main class="container">
     <div class="jumbotron">
       <h1 align="center">{{displayname}}</h1>
@@ -15,10 +16,21 @@
       <h4 class="section-head">Current Affiliation</h4>
       <p class="content">{{affiliation}}</p>
       <router-link to="/editprofile">
-      <button v-if="userCheck" class="btn btn-primary btn-lg btn-block col-md-3">Update</button>
+        <button v-if="userCheck" class="btn btn-primary btn-lg btn-block col-md-3">Update</button>
       </router-link>
     </div>
   </main>
+  <hr class="featurette-divider">
+
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2018 pHarmr ·
+      <a>
+        <router-link :to="{ name: 'privacy'}">Privacy</router-link>
+      </a>
+    </p>
+  </footer>
+</div>
 </template>
 
 <script>
@@ -26,12 +38,12 @@ import firebase from 'firebase'
 import db from '@/firebase/init.js'
 export default {
   name: 'profile',
-  computed:{
-    user () {
+  computed: {
+    user() {
       return this.$store.state.user
     }
   },
-  data () {
+  data() {
     return {
       uname: this.$route.params.uname,
       displayname: null,
@@ -44,7 +56,7 @@ export default {
       userCheck: null
     }
   },
-  async created(){
+  async created() {
     let finduser = await db.collection('users').where("uname", "==", this.uname).get()
     this.bio = finduser.docs[0].data().bio
     this.city = finduser.docs[0].data().city
@@ -63,15 +75,15 @@ export default {
 </script>
 
 <style>
-h1{
+h1 {
   color: #444;
 }
 
-.section-head{
+.section-head {
   padding-left: 8px
 }
 
-.content{
+.content {
   padding-left: 12px
 }
 </style>

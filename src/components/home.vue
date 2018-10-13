@@ -4,9 +4,6 @@
         <div class="container">
           <h1 class="jumbotron-heading">pHarmr</h1>
           <p class="lead text-muted">Automate your Hydroponics with pHarmr</p>
-          <p>
-            <a class="btn btn-outline-secondary my-2"><router-link :to="{ name: 'connect'}">Reach Out!</router-link></a>
-          </p>
         </div>
       </section>
 
@@ -15,7 +12,7 @@
 
           <footer class="container">
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p>© 2018 Bhav.AT · <a><router-link :to="{ name: 'privacy'}">Privacy</router-link></a></p>
+            <p>© 2018 pHarmr · <a><router-link :to="{ name: 'privacy'}">Privacy</router-link></a></p>
           </footer>
     </main>
 </template>
