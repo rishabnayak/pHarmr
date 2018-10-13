@@ -6,6 +6,7 @@ import store from '@/store/store.js'
 import login from '@/components/login'
 import editprofile from '@/components/edit-profile'
 import profile from '@/components/profile'
+import home from '@/components/home'
 
 Vue.use(Router)
 
@@ -13,7 +14,7 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: login
     },
@@ -29,6 +30,11 @@ const router = new Router({
       path: '/profile/:uname',
       name: 'profile',
       component: profile
+    },
+    {
+      path: '/',
+      name: 'home',
+      component: home
     }
   ]
 })

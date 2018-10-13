@@ -1,12 +1,21 @@
 <template>
-  <div class="splash">
-    <div v-if="user">
-      <router-link :to="{ path: profilelink()}">
-        <i class="material-icons md-48">account_circle</i>
-      </router-link>
+<main>
+  <div class="container">
+    <div class="jumbotron">
+      <div id="firebaseui-auth-container"></div>
     </div>
-    <div v-else id="firebaseui-auth-container"></div>
   </div>
+  <hr class="featurette-divider">
+
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2018 pHarmr ·
+      <a>
+        <router-link :to="{ name: 'privacy'}">Privacy</router-link>
+      </a>
+    </p>
+  </footer>
+</main>
 </template>
 
 <script>
