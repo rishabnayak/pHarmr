@@ -23,6 +23,7 @@ import firebase from 'firebase'
 import firebaseui from 'firebaseui'
 import db from '@/firebase/init.js'
 export default {
+  name: 'login',
   computed: {
     user () {
       return this.$store.state.user
