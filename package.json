@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@google-cloud/pubsub": "^0.20.1",
     "firebase": "^5.5.4",
     "firebaseui": "^3.4.1",
+    "http2": "^3.3.7",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-masonry-css": "^1.0.3",
