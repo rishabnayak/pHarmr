@@ -4,6 +4,7 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark"><router-link to="/">Home</router-link><span class="sr-only">(current)</span></a>
         <a v-if="user" class="p-2 text-dark"><router-link :to="{ path: profilelink()}">Profile</router-link></a>
+        <a v-if="user" class="p-2 text-dark"><router-link :to="{ path: 'dashboard'}">Dashboard</router-link></a>
       </nav>
       <a v-if="user" class="nav-link btn btn-outline" @click="signOut()">Logout</a>
       <a v-else class="nav-link btn btn-outline" @click="login()">Login</a>

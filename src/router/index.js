@@ -7,6 +7,7 @@ import login from '@/components/login'
 import editprofile from '@/components/edit-profile'
 import profile from '@/components/profile'
 import home from '@/components/home'
+import dashboard from '@/components/dashboard'
 
 Vue.use(Router)
 
@@ -22,6 +23,14 @@ const router = new Router({
       path: '/editprofile',
       name: 'editprofile',
       component: editprofile,
+      meta:{
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: dashboard,
       meta:{
         requiresAuth: true
       }
