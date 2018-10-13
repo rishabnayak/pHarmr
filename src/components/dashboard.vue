@@ -18,3 +18,39 @@
       </footer>
 </main>
 </template>
+
+<script>
+import firebase from 'firebase'
+import firebaseui from 'firebaseui'
+import db from '@/firebase/init.js'
+export default {
+  name: 'dashboard',
+  computed: {
+    user() {
+      return this.$store.state.user
+    }
+  },
+  methods: {
+    doSomething() {
+      var request = require('request');
+
+      var options = {
+        url: 'https://io.adafruit.com/api/v2/rishab2113/feeds/temperature/data',
+        headers: {
+          'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
+          'Content-Type': 'application/json'
+        }
+      };
+
+      function callback(error, response, body) {
+        if (!error && response.statusCode == 200) {
+          var feed = JSON.parse(body);
+          console.log(feed);
+        }
+      }
+
+      request(options, callback);
+    }
+  }
+}
+</script>
