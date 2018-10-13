@@ -4,7 +4,7 @@
     <div class="container">
       <h1 class="jumbotron-heading">pHarmr</h1>
       <p class="lead text-muted">Automate your Hydroponics with pHarmr</p>
-      <p>{{data}}</p>
+      <button class="btn btn-primary btn-lg btn-block col-md-3" @click="doSomething()">Click</button>
     </div>
   </section>
 
@@ -31,7 +31,11 @@ export default {
     }
   },
   methods: {
-
+    doSomething(){
+      var xhr = new XMLHttpRequest()
+      xhr.open("GET", "https://pubsub.googleapis.com/v1/projects/pharmr-2018/topics/dht11",true)
+      console.log(xhr.send())
+    }
   },
   async mounted() {
     if (this.user) {
@@ -47,7 +51,6 @@ export default {
     }
   },
   async created() {
-
   }
 }
 </script>
