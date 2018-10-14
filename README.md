@@ -26,6 +26,7 @@ pHarmr is a Hydroponics set up coupled with extensive monitoring and adjusting s
 James C., Rishab Nayak, Jason Smith, Emily Vogelsperger
 
 ### What inspired you to make this?
+Emily: I was inspired to join this project because I personally have no experience in hydroponics and I was interested in joining a very diverse group.  Each person in this group brought specific talents that were unique to the rest of the group.  It was incredibly rewarding to take an idea (of which I knew none of the background) and hear so many different points of view on how to tackle this problem.  Also, I got exposure to some interesting hardware, which I know nothing about.
 
 ### What does your project do?
 pHarmr uses multiple sensors--pH, temperature, moisture--and feeds the real-time values through a Raspberry Pi
