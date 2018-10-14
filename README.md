@@ -52,10 +52,9 @@ was daunting and frustrating at times, we are all ecstatic that we were able to 
 done before.
 
 Additionally, we all ran into lots of trouble while figuring out how to poll our server, send HTTP requests, and feed
-these values into our Vue web application.  Again--these were all things we hadn't done before!  All-in-all, it was
-an incredibly rewarding experience.
+these values into our Vue web application.  Again--these were all things we hadn't done before!
 
-Finally, we had a lot of trouble actually displaying the values we got from out polled data.  Unfortunately it was very difficult to simply display our real-time data in our HTML tag.
+Finally, we had a lot of trouble actually displaying the values we got from out polled data.  Unfortunately it was very difficult to simply display our real-time data in our HTML tag.  All-in-all, it was an incredibly rewarding experience.
 
 ### What accomplishments are you proud of?
 Definitely receiving that first 200 response from our HTTP request (and it actually contained the correct values)!  
