@@ -1,13 +1,28 @@
 <template>
 <main role="main">
-    <section class="jumbotron text-center">
-          <div class="container">
-                <p class="lead text-muted">Temp</p>
-      <button class="btn btn-primary" @click="doSomething()">Refresh</button>
-            </div>
-      </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="jumbotron text-center">
+          1
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="jumbotron text-center">
+          2
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="jumbotron text-center">
+          3
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" @click="doSomething()">Refresh</button>
 
-    
+  </div>
+
   <hr class="featurette-divider">
 
     <footer class="container">
