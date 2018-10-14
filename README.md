@@ -82,4 +82,4 @@ their environment scripts with others, sharing their first-hand knowledge growin
 ### What did you build it with?
 Front-End framework is Vue.js, while the server is run on Adafruit.  Our sensors connect to our Raspberry-Pi which in
 turn sends the sensor information to Adafruit.  Using XMLHttpRequests, we are able to poll from the server to retrieve
-the sensor data.
+the sensor data. Along with a couple of trips to the hardware store we were able to put it all together into a project we are very proud of.
