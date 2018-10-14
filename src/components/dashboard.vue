@@ -22,6 +22,9 @@
       </div>
     </div>
     <br>
+    <div style="text-align: center;">
+      <button class="btn btn-primary" @click="toggleLights()">Toggle Lights</button>
+    </div>
   </div>
 
   <hr class="featurette-divider">
@@ -54,7 +57,17 @@ export default {
       utemp: null
     }
   },
-methods: {
+  methods: {
+    toggleLights() {
+      axios.post('https://io.adafruit.com/api/v2/rishab2113/feeds/light/data', {
+        "value": "toggle"
+      }, {
+        headers: {
+          'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
+          'Content-Type': 'application/json'
+        }
+      })
+    },
     getTemp() {
       axios.get(
           'https://io.adafruit.com/api/v2/rishab2113/feeds/temperature/data/last', {
@@ -66,7 +79,9 @@ methods: {
         )
         .then((response) => {
           this.temp = response.data.value;
-          setTimeout(() => {this.getTemp()}, 30000)
+          setTimeout(() => {
+            this.getTemp()
+          }, 30000)
         });
     },
     getuTemp() {
@@ -80,7 +95,9 @@ methods: {
         )
         .then((response) => {
           this.utemp = response.data.value;
-          setTimeout(() => {this.getuTemp()}, 30000)
+          setTimeout(() => {
+            this.getuTemp()
+          }, 30000)
         });
     },
     getHumidity() {
@@ -94,11 +111,13 @@ methods: {
         )
         .then((response) => {
           this.humidity = response.data.value;
-          setTimeout(() => {this.getHumidity()}, 30000)
+          setTimeout(() => {
+            this.getHumidity()
+          }, 30000)
         });
     },
   },
-  mounted(){
+  mounted() {
     this.getTemp()
     this.getHumidity()
     this.getuTemp()
