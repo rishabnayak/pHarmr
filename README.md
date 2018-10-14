@@ -20,7 +20,7 @@ pHarmr
 ```
 
 ### Describe your project!
-pHarmr is a Hydroponics set up coupled with extensive monitoring and adjusting software.  With the help of pHarmr, users can monitor the health of their plants from miles away.  In dangerous climates minimal interaction with the crops is paramount, pHarmr allows users to adjust their crops' environment without needing to interact (and possibly contaminate) the plants.  Additionally, pHarmr can teach people with little to no experience in growing their own food how to provide their plants with the healthiest environment.  In the future, harvesters could simply share scripts--including the basic environmental needs of a plant--to teach other users how to grow a particular plant.
+pHarmr is a Hydroponics set up with extensive monitoring software.  With the help of pHarmr, users can monitor the health of their plants from miles away. In dangerous climates, where minimal interaction with the crops is paramount, pHarmr allows users to adjust their crops' environment without needing to interact (and possibly contaminate) the plants.  Additionally, pHarmr can teach people with little to no experience in growing their own food how to provide their plants with the healthiest environment.  In the future, harvesters could simply share scripts--including the basic environmental needs of a plant--to teach other users how to grow a particular plant.
 
 ### Who made this amazing Hack?
 James Cunningham, Rishab Nayak, Jason Smith, Emily Vogelsperger
@@ -28,7 +28,7 @@ James Cunningham, Rishab Nayak, Jason Smith, Emily Vogelsperger
 ### What inspired you to make this?
 James: I have a long time interest in agriculture and humanitarianism. This type of project allowed me to pursue a technically challenging project and one that could make a very real different in the lives of people in war zones and communities under siege throughout the world. I was lucky to have such fantastic team members and thoroughly enjoyed the experience of helping to develop these systems
 
-Rishab:
+Rishab: I joined the project as a web developer, with experience with progressive web apps and hardware interfacing. We got along well as a team, working together to solve the challenges we faced, starting from getting the Pi to communicate with the cloud, to writing async functions. Overall, I learnt a lot, and it was a great experience.
 
 Jason: I sincerely believe that a new and efficient way to farm is needed to feed our growing population amidst an increasingly changing climate. The world needs new systems all around. I had this idea but not nearly enough skillsets to complete it. I put it out on our slack channel and a wonderfully amazing and diverse group of people with awesome ideas stepped up. I got to immerse myself in a world of backend DBs and learn some new and valuable coding skills.
 
@@ -36,33 +36,32 @@ Emily: I was inspired to join this project because I personally have no experien
 
 ### What does your project do?
 pHarmr uses multiple sensors--pH, temperature, moisture--and feeds the real-time values through a Raspberry Pi
-and to a server.  Our web application then polls the server for these values and displays them neatly on the screen.  
-If the user adjusts any of the sensors, the whole process is reversed until the sensor receives the adjust instruction.
+to a pub/sub, to which we subscribe, to extract data.  Our web application polls the server once every 30s for these values and displays them on the screen.  
+If the user adjusts any of the sensors, the same path is used to communicate with the Pi.
 
 ### How did you build it?
-Hardware: NFT hydro system with LED grow light. Designed to be easily automated and require minimal maintenance. 
+Hardware: NFT hydro system with an LED grow light. Designed to be easily automated and require minimal maintenance.
 
-Software: The front-end web application uses a Vue framework with JavaScripting.  For the server we used Adafruit,
-which connects directly to the Raspberry Pi.
+Software: The web application was built with Vue, Firebase and Node.JS. We used Adafruit-IO as the cloud pub/sub server, which connects directly to the Raspberry Pi.
 
 ### What challenges did you face?
-None of us had made a server before!  We all spent a considerable amount of time learning Google IoT, Could Firestore,
-and Adafruit in order to get this project up and running.  While learning this very complicated and extremely new skill
+None of us had worked with a server that extensively before!  We all spent a considerable amount of time learning Google IoT, Cloud Firestore,
+and Adafruit-IO in order to get this project up and running.  While learning this very complicated and extremely new skill
 was daunting and frustrating at times, we are all ecstatic that we were able to accomplish something big we had never
 done before.
 
 Additionally, we all ran into lots of trouble while figuring out how to poll our server, send HTTP requests, and feed
-these values into our Vue web application.  Again--these were all things we hadn't done before!  All-in-all, it was
+these values into our web application. Again--these were all things we hadn't done before!  All-in-all, it was
 an incredibly rewarding experience.
 
-Finally, we had a lot of trouble actually displaying the values we got from out polled data.  Unfortunately it was very difficult to simply display our real-time data in our HTML tag.
+Finally, we had a lot of trouble actually displaying the values we got from out polled data.
 
 ### What accomplishments are you proud of?
 Definitely receiving that first 200 response from our HTTP request (and it actually contained the correct values)!  
 Another big accomplishment was setting up our Raspberry-Pi with the Adafruit server.  This is mainly because we spent
 almost all of the beginning stages of the hackathon trying to learn Google Cloud IoT and Cloud Firestore and we were
 glad to see some progress.
-Finally figuring out how to poll the server on JavaScript--WITHOUT destroying our memory--was probably our greatest accomplishment of the night.  This was a problem we spent many hours on and asked many mentors for help with.  
+Finally figuring out how to poll the server on JavaScript--WITHOUT causing a stack overflow--was probably our greatest accomplishment of the night.  This was a problem we spent many hours on and asked many mentors for help with.  
 
 ### What did you learn while building this?
 A lot of the software we were working with are extremely finicky.  It was very difficult to debug--especially since this
@@ -80,6 +79,5 @@ added without overloading the Raspberry Pi.  In future implementations, pHarmr w
 their environment scripts with others, sharing their first-hand knowledge growing that particular plant.
 
 ### What did you build it with?
-Front-End framework is Vue.js, while the server is run on Adafruit.  Our sensors connect to our Raspberry-Pi which in
-turn sends the sensor information to Adafruit.  Using XMLHttpRequests, we are able to poll from the server to retrieve
-the sensor data.
+Our Front-End was built with Vue.js, which runs as a serverless app on Firebase. The IoT server is run by Adafruit.  Our sensors connect to the Pi, which in
+turn sends the sensor information to Adafruit.  Using XMLHttpRequests, we are able to poll from the server to retrieve the sensor data.

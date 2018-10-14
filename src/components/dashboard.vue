@@ -81,7 +81,7 @@ export default {
           this.temp = response.data.value;
           setTimeout(() => {
             this.getTemp()
-          }, 30000)
+          }, 10000)
         });
     },
     getuTemp() {
@@ -97,7 +97,7 @@ export default {
           this.utemp = response.data.value;
           setTimeout(() => {
             this.getuTemp()
-          }, 30000)
+          }, 10000)
         });
     },
     getHumidity() {
@@ -113,7 +113,7 @@ export default {
           this.humidity = response.data.value;
           setTimeout(() => {
             this.getHumidity()
-          }, 30000)
+          }, 10000)
         });
     },
   },
