@@ -23,10 +23,10 @@ pHarmr
 pHarmr is a Hydroponics set up coupled with extensive monitoring and adjusting software.  With the help of pHarmr, users can monitor the health of their plants from miles away.  In dangerous climates minimal interaction with the crops is paramount, pHarmr allows users to adjust their crops' environment without needing to interact (and possibly contaminate) the plants.  Additionally, pHarmr can teach people with little to no experience in growing their own food how to provide their plants with the healthiest environment.  In the future, harvesters could simply share scripts--including the basic environmental needs of a plant--to teach other users how to grow a particular plant.
 
 ### Who made this amazing Hack?
-James C., Rishab Nayak, Jason Smith, Emily Vogelsperger
+James Cunningham, Rishab Nayak, Jason Smith, Emily Vogelsperger
 
 ### What inspired you to make this?
-James:
+James: I have a long time interest in agriculture and humanitarianism. This type of project allowed me to pursue a technically challenging project and one that could make a very real different in the lives of people in war zones and communities under siege throughout the world. I was lucky to have such fantastic team members and thoroughly enjoyed the experience of helping to develop these systems
 
 Rishab:
 
@@ -40,7 +40,7 @@ and to a server.  Our web application then polls the server for these values and
 If the user adjusts any of the sensors, the whole process is reversed until the sensor receives the adjust instruction.
 
 ### How did you build it?
-Hardware:
+Hardware: NFT hydro system with LED grow light. Designed to be easily automated and require minimal maintenance. 
 
 Software: The front-end web application uses a Vue framework with JavaScripting.  For the server we used Adafruit,
 which connects directly to the Raspberry Pi.
