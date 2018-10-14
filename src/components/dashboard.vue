@@ -4,23 +4,24 @@
     <div class="row">
       <div class="col-sm">
         <div class="jumbotron text-center">
-          1
+          <p class="text-muted">Air Temperature</p>
+          {{temp}}
         </div>
       </div>
       <div class="col-sm">
         <div class="jumbotron text-center">
-          2
+          <p class="text-muted">Humidity</p>
+          {{humidity}}
         </div>
       </div>
       <div class="col-sm">
         <div class="jumbotron text-center">
-          3
+          <p class="text-muted">Water Temperature</p>
+          {{utemp}}
         </div>
       </div>
     </div>
     <br>
-    <button class="btn btn-primary" @click="doSomething()">Refresh</button>
-
   </div>
 
   <hr class="featurette-divider">
@@ -38,6 +39,7 @@
 import firebase from 'firebase'
 import firebaseui from 'firebaseui'
 import db from '@/firebase/init.js'
+import axios from 'axios'
 export default {
   name: 'dashboard',
   computed: {
@@ -45,27 +47,61 @@ export default {
       return this.$store.state.user
     }
   },
-  methods: {
-    doSomething() {
-      var request = require('request');
-
-      var options = {
-        url: 'https://io.adafruit.com/api/v2/rishab2113/feeds/temperature/data',
-        headers: {
-          'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
-          'Content-Type': 'application/json'
-        }
-      };
-
-      function callback(error, response, body) {
-        if (!error && response.statusCode == 200) {
-          var feed = JSON.parse(body);
-          console.log(feed);
-        }
-      }
-
-      request(options, callback);
+  data() {
+    return {
+      temp: null,
+      humidity: null,
+      utemp: null
     }
+  },
+methods: {
+    getTemp() {
+      axios.get(
+          'https://io.adafruit.com/api/v2/rishab2113/feeds/temperature/data/last', {
+            headers: {
+              'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+        .then((response) => {
+          this.temp = response.data.value;
+          setTimeout(() => {this.getTemp()}, 30000)
+        });
+    },
+    getuTemp() {
+      axios.get(
+          'https://io.adafruit.com/api/v2/rishab2113/feeds/utemp/data/last', {
+            headers: {
+              'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+        .then((response) => {
+          this.utemp = response.data.value;
+          setTimeout(() => {this.getuTemp()}, 30000)
+        });
+    },
+    getHumidity() {
+      axios.get(
+          'https://io.adafruit.com/api/v2/rishab2113/feeds/humidity/data/last', {
+            headers: {
+              'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+        .then((response) => {
+          this.humidity = response.data.value;
+          setTimeout(() => {this.getHumidity()}, 30000)
+        });
+    },
+  },
+  mounted(){
+    this.getTemp()
+    this.getHumidity()
+    this.getuTemp()
   }
 }
 </script>
