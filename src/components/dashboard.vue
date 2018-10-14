@@ -60,7 +60,7 @@ export default {
   methods: {
     toggleLights() {
       axios.post('https://io.adafruit.com/api/v2/rishab2113/feeds/light/data', {
-        "value": "toggle"
+        "value": "1"
       }, {
         headers: {
           'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
