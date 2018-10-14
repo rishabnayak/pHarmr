@@ -30,7 +30,7 @@ James: I have a long time interest in agriculture and humanitarianism. This type
 
 Rishab:
 
-Jason:
+Jason: I sincerely believe that a new and efficient way to farm is needed to feed our growing population amidst an increasingly changing climate. The world needs new systems all around. I had this idea but not nearly enough skillsets to complete it. I put it out on our slack channel and a wonderfully amazing and diverse group of people with awesome ideas stepped up. I got to immerse myself in a world of backend DBs and learn some new and valuable coding skills.
 
 Emily: I was inspired to join this project because I personally have no experience in hydroponics and I was interested in joining a very diverse group.  Each person in this group brought specific talents that were unique to the rest of the group.  It was incredibly rewarding to take an idea (of which I knew none of the background) and hear so many different points of view on how to tackle this problem.  Also, I got exposure to some interesting hardware, which I know nothing about.
 
