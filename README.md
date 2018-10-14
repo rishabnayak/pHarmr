@@ -51,16 +51,10 @@ was daunting and frustrating at times, we are all ecstatic that we were able to 
 done before.
 
 Additionally, we all ran into lots of trouble while figuring out how to poll our server, send HTTP requests, and feed
-<<<<<<< HEAD
 these values into our web application. Again--these were all things we hadn't done before!  All-in-all, it was
 an incredibly rewarding experience.
 
 Finally, we had a lot of trouble actually displaying the values we got from out polled data.
-=======
-these values into our Vue web application.  Again--these were all things we hadn't done before!
-
-Finally, we had a lot of trouble actually displaying the values we got from out polled data.  Unfortunately it was very difficult to simply display our real-time data in our HTML tag.  All-in-all, it was an incredibly rewarding experience.
->>>>>>> 945c9f9ec6a66f9b4dbf79dfc976413198d9bfcf
 
 ### What accomplishments are you proud of?
 Definitely receiving that first 200 response from our HTTP request (and it actually contained the correct values)!  
@@ -85,11 +79,5 @@ added without overloading the Raspberry Pi.  In future implementations, pHarmr w
 their environment scripts with others, sharing their first-hand knowledge growing that particular plant.
 
 ### What did you build it with?
-<<<<<<< HEAD
 Our Front-End was built with Vue.js, which runs as a serverless app on Firebase. The IoT server is run by Adafruit.  Our sensors connect to the Pi, which in
 turn sends the sensor information to Adafruit.  Using XMLHttpRequests, we are able to poll from the server to retrieve the sensor data.
-=======
-Front-End framework is Vue.js, while the server is run on Adafruit.  Our sensors connect to our Raspberry-Pi which in
-turn sends the sensor information to Adafruit.  Using XMLHttpRequests, we are able to poll from the server to retrieve
-the sensor data. Along with a couple of trips to the hardware store we were able to put it all together into a project we are very proud of.
->>>>>>> 945c9f9ec6a66f9b4dbf79dfc976413198d9bfcf
