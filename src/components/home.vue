@@ -3,7 +3,10 @@
     <section class="jumbotron text-center">
         <div class="container">
             <img class="img-fluid width: 100%; height: auto;" src="@/assets/pHarmr_logo.png" />
-            <p class="lead text-muted">Automate your Hydroponics with pHarmr</p>
+            <h3 class="text-muted">Automate your Hydroponics with pHarmr</h3>
+            <br>
+            <br>
+            <button class="btn btn-outline-primary"><router-link :to="{ path: dashlink()}">Dashboard</router-link></button>
           </div>
       </section>
 
@@ -42,6 +45,11 @@ export default {
       return
     }
   },
-  async created() {}
+  async created() {},
+  methods: {
+    dashlink: function(){
+      return "/dashboard"
+    }
+  }
 }
 </script>
