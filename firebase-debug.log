@@ -55,3 +55,19 @@
 [info] i  functions: preparing functions directory for uploading...
 [debug] [2018-10-14T06:00:54.057Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/pharmr-2018/configs  
  
+[debug] [2018-10-14T06:00:54.704Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-14T06:00:54.705Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/pharmr-2018/configs/service/variables  
+ 
+[debug] [2018-10-14T06:00:55.937Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-14T06:00:55.938Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/pharmr-2018/configs/service/variables/key  
+ 
+[debug] [2018-10-14T06:00:57.593Z] <<< HTTP RESPONSE 200
+[info] i  hosting[pharmr-2018]: beginning deploy...
+[info] i  hosting[pharmr-2018]: found 25 files in dist
+[debug] [2018-10-14T06:00:58.514Z] [hosting] hash cache [ZGlzdA] stored for 25 files
+[debug] [2018-10-14T06:00:58.514Z] [hosting][hash queue][FINAL]
+[debug] [2018-10-14T06:00:58.514Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pharmr-2018/versions/182a9cf7e9fd9309:populateFiles  
+ <request body omitted>
+[debug] [2018-10-14T06:01:00.410Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-14T06:01:00.414Z] [hosting][populate queue][FINAL]
+[debug] [2018-10-14T06:01:00.414Z] [hosting] uploads queued: 5
