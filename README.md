@@ -55,11 +55,14 @@ Additionally, we all ran into lots of trouble while figuring out how to poll our
 these values into our Vue web application.  Again--these were all things we hadn't done before!  All-in-all, it was
 an incredibly rewarding experience.
 
+Finally, we had a lot of trouble actually displaying the values we got from out polled data.  Unfortunately it was very difficult to simply display our real-time data in our HTML tag.
+
 ### What accomplishments are you proud of?
 Definitely receiving that first 200 response from our HTTP request (and it actually contained the correct values)!  
 Another big accomplishment was setting up our Raspberry-Pi with the Adafruit server.  This is mainly because we spent
 almost all of the beginning stages of the hackathon trying to learn Google Cloud IoT and Cloud Firestore and we were
 glad to see some progress.
+Finally figuring out how to poll the server on JavaScript--WITHOUT destroying our memory--was probably our greatest accomplishment of the night.  This was a problem we spent many hours on and asked many mentors for help with.  
 
 ### What did you learn while building this?
 A lot of the software we were working with are extremely finicky.  It was very difficult to debug--especially since this
