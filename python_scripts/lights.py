@@ -11,7 +11,7 @@ import board
 from Adafruit_IO import Client, Feed, RequestError
 
 ADAFRUIT_IO_KEY = 'fa8007a47db04ca29386bdcca2f0c203'
-ADAFRUIT_IO_USERNAME = 'rishab2113'
+ADAFRUIT_IO_USERNAME = 'pHarmr'
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20,GPIO.OUT)
@@ -51,7 +51,7 @@ try:
 except KeyboardInterrupt:
 
 	GPIO.output(20,0)
-	GPIO.cleanup()	
+	GPIO.cleanup()
 while True:
     data = aio.receive(digital.key)
     print(data)
@@ -60,7 +60,7 @@ while True:
         GPIO.output(20,1)
         time.sleep(30)
         print('Grow light on\n')
-	
+
     elif data.value == '0':
         print('received <- OFF\n')
 

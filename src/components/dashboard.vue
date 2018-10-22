@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     toggleLights() {
-      axios.post('https://io.adafruit.com/api/v2/rishab2113/feeds/light/data', {
+      axios.post('https://io.adafruit.com/api/v2/pHarmr/feeds/light/data', {
         "value": "1"
       }, {
         headers: {
@@ -70,7 +70,7 @@ export default {
     },
     getTemp() {
       axios.get(
-          'https://io.adafruit.com/api/v2/rishab2113/feeds/temperature/data/last', {
+          'https://io.adafruit.com/api/v2/pHarmr/feeds/temperature/data/last', {
             headers: {
               'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
               'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ export default {
     },
     getuTemp() {
       axios.get(
-          'https://io.adafruit.com/api/v2/rishab2113/feeds/utemp/data/last', {
+          'https://io.adafruit.com/api/v2/pHarmr/feeds/utemp/data/last', {
             headers: {
               'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
               'Content-Type': 'application/json'
@@ -102,7 +102,7 @@ export default {
     },
     getHumidity() {
       axios.get(
-          'https://io.adafruit.com/api/v2/rishab2113/feeds/humidity/data/last', {
+          'https://io.adafruit.com/api/v2/pHarmr/feeds/humidity/data/last', {
             headers: {
               'X-AIO-Key': 'fa8007a47db04ca29386bdcca2f0c203',
               'Content-Type': 'application/json'
